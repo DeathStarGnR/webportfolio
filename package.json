@@ -1,0 +1,41 @@
+{
+  "name": "webportfolio",
+  "version": "1.0.0",
+  "description": "Web Design Portfolio",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "stylus source\\stylesheets\\index.styl -o static\\css",
+    "watch-css": "stylus source\\stylesheets\\index.styl -o static\\css -w",
+    "clean": "rm -rf static\\css && mkdir static\\css",
+    "build": "npm run clean && npm run build-css",
+    "watch": "npm run clean && npm run watch-css & nodemon server -e js,jade",
+    "start": "nodemon server -e js,jade"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DeathStarGnR/webportfolio.git"
+  },
+  "keywords": [
+    "web",
+    "design",
+    "css",
+    "html",
+    "javascript"
+  ],
+  "author": "Nathaniel Bailey",
+  "license": "BSD-2-Clause",
+  "private": true,
+  "bugs": {
+    "url": "https://github.com/DeathStarGnR/webportfolio/issues"
+  },
+  "homepage": "https://github.com/DeathStarGnR/webportfolio#readme",
+  "dependencies": {
+    "express": "4.x",
+    "formidable": "1.x",
+    "morgan": "1.x",
+    "nodemon": "1.x",
+    "pug": "1.x",
+    "stylus": "0.x"
+  }
+}
